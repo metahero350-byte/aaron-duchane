@@ -1,0 +1,85 @@
+{
+  "name": "Aaron Duchane",
+  "domain": "aaronduchane.com",
+  "tagline": "The Man. The Work. The Mission.",
+  "hero": {
+    "line": "Building what matters. Protecting what matters. Creating what comes next.",
+    "marker": "there's a reason i do all of this.",
+    "bg": "hero-bg-clean.png",
+    "cutout": "hero-aaron-cutout.png"
+  },
+  "philosophy": [
+    "Build",
+    "Protect",
+    "Create"
+  ],
+  "nav": [
+    {
+      "label": "The Man",
+      "href": "/man"
+    },
+    {
+      "label": "The Work",
+      "href": "/work"
+    },
+    {
+      "label": "The Mission",
+      "href": "/mission"
+    },
+    {
+      "label": "Ideas",
+      "href": "/ideas"
+    },
+    {
+      "label": "Now",
+      "href": "/now"
+    },
+    {
+      "label": "Connect",
+      "href": "/connect",
+      "cta": true
+    }
+  ],
+  "connectReasons": [
+    "Financial conversation",
+    "Business",
+    "Creative collaboration",
+    "AI / Technology",
+    "Media",
+    "Project inquiry",
+    "Other"
+  ],
+  "footerStatement": "Build well. Protect what matters. Leave something worth inheriting.",
+  "socials": [
+    {
+      "label": "[SOCIAL — ADD]",
+      "href": null
+    },
+    {
+      "label": "[SOCIAL — ADD]",
+      "href": null
+    }
+  ],
+  "seo": {
+    "title": "Aaron Duchane — The Man. The Work. The Mission.",
+    "description": "Aaron Duchane builds, protects, and creates across finance, design, technology, and systems — one philosophy behind many disciplines.",
+    "ogImage": "/og/aaron-duchane-og.jpg"
+  },
+  "personSchema": {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aaron Duchane",
+    "url": "https://aaronduchane.com",
+    "jobTitle": "[ADD — e.g. Founder]",
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "Heritage Protection Solutions"
+      }
+    ],
+    "sameAs": [
+      "[SOCIAL URL — ADD]"
+    ]
+  },
+  "refrain": "Different rooms. Different seasons. Same foundation."
+}
