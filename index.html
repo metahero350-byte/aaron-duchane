@@ -271,7 +271,8 @@ section.scene{padding:0}
 .proj{grid-column:span 2;border:1px solid var(--grid);background:var(--charcoal);transition:border-color .4s,transform .4s var(--ease);display:flex;flex-direction:column}
 .proj:hover{border-color:var(--line);transform:translateY(-4px)}
 .proj.feat{grid-column:span 3}
-.proj .img{aspect-ratio:16/10;position:relative}
+.proj .img{aspect-ratio:16/10;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--steel),var(--charcoal))}
+.proj .img .cardimg{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .proj .body{padding:22px 22px 26px}
 .proj .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .proj .status{font-family:"Archivo";font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;display:inline-flex;align-items:center;gap:7px}
@@ -520,7 +521,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
       </article>
 
       <article class="proj rv branded" style="--brand:#6E93B4">
-        <div class="img"><div class="plate" style="height:100%"><span class="pmeta">3 PATH FINANCIAL</span><span class="pslot">IMG-WORK-3PF</span><div class="pc"><div class="k">[ media / studio ]</div></div></div></div>
+        <div class="img"><img class="cardimg" style="object-position:center 22%" src="https://faithmoneymentalhealth.com/founders/aaron-duchane.jpg" alt="Aaron Duchane — 3 Path Financial" loading="lazy"></div>
         <div class="body">
           <div class="top"><span class="status active">Active</span><span class="spine">Create</span></div>
           <h3>3 Path Financial</h3>
@@ -530,7 +531,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
       </article>
 
       <article class="proj rv d1 branded" style="--brand:#C77E57">
-        <div class="img"><div class="plate" style="height:100%"><span class="pmeta">FMM · PODCAST</span><span class="pslot">IMG-WORK-POD</span><div class="pc"><div class="k">[ podcast set / mic ]</div></div></div></div>
+        <div class="img"><img class="cardimg" src="https://fmmpodcast.com/images/group-photo.jpg" alt="Faith, Money & Mental Health podcast hosts" loading="lazy"></div>
         <div class="body">
           <div class="top"><span class="status active">Active</span><span class="spine">Create</span></div>
           <h3>Faith, Money &amp; Mental Health</h3>
