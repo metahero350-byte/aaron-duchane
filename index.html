@@ -3,11 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aaron Duchane · The Man. The Work. The Mission.</title>
-<meta name="description" content="Aaron Duchane builds, protects, and creates across finance, design, technology, and systems. One philosophy behind many disciplines." />
-<meta property="og:title" content="Aaron Duchane · The Man. The Work. The Mission." />
-<meta property="og:description" content="Build well. Protect what matters. Leave something worth inheriting." />
+<title>Aaron Duchane — The Man. The Work. The Mission.</title>
+<meta name="description" content="Aaron Duchane builds across business, financial education, building systems, technology, creative media, faith, and generational legacy. Different rooms. Different seasons. Same foundation." />
+<link rel="canonical" href="https://aaronduchane.com/" />
+<meta property="og:title" content="Aaron Duchane — The Man. The Work. The Mission." />
+<meta property="og:description" content="Aaron Duchane builds across business, financial education, building systems, technology, creative media, faith, and generational legacy. Different rooms. Different seasons. Same foundation." />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://aaronduchane.com/" />
+<meta property="og:image" content="https://aaronduchane.com/assets/images/og-preview.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Aaron Duchane — The Man. The Work. The Mission." />
+<meta name="twitter:description" content="Different rooms. Different seasons. Same foundation." />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Aaron Duchane","url":"https://aaronduchane.com","description":"Aaron Duchane builds across financial education, construction, technology, creative media, faith, and generational legacy.","sameAs":[]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,800;0,900;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Caveat:wght@600&display=swap" rel="stylesheet" />
@@ -87,7 +94,7 @@ nav.menu a.cta:hover{background:var(--champagne);color:var(--ink)}
 .burger span{width:26px;height:2px;background:var(--bone);transition:.3s}
 .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-46deg)}
 @media(max-width:820px){
   nav.menu{position:fixed;inset:0;background:var(--ink);flex-direction:column;justify-content:center;gap:26px;transform:translateY(-100%);transition:transform .5s var(--ease);z-index:55}
   nav.menu.open{transform:none}
@@ -111,21 +118,12 @@ section{position:relative;padding:clamp(90px,13vh,150px) clamp(28px,7vw,120px)}
 .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
 
-/* ---------- HERO — break-through composition ----------
-   Layer 1  .hero-media   the full photograph (concrete, graffiti, glass, Aaron)
-   Layer 2  .hero-scrim   directional contrast wash
-   Layer 3  .hero-inner   the NAME typography
-   Layer 4  .hero-cutout  transparent cut-out of Aaron, registered 1:1 over the photo,
-                          so where the name crosses his body he OCCLUDES it → he steps
-                          through the letters. Both media + cutout use identical
-                          size/position, so they stay aligned at every viewport.        */
+/* ---------- HERO ---------- */
 .hero{position:relative;min-height:100svh;display:flex;overflow:hidden;background:var(--ink);--hero-pos:80% center}
-/* parallax planes — wrappers translate (JS); inner elements keep the load-zoom, so the two never fight */
 .p-bg,.p-fig,.p-lines{position:absolute;inset:0}
 .p-fig{z-index:4;pointer-events:none}
 .p-lines{z-index:2;pointer-events:none}
 .hero.motion .p-bg,.hero.motion .p-fig,.hero.motion .p-lines{will-change:transform}
-/* deepest plane: blueprint linework, confined to the left negative space, fading out before the figure */
 .hero-lines{position:absolute;inset:0;opacity:.6;
   background:
     linear-gradient(90deg,var(--line) 0 1px,transparent 1px) 11% 0/1px 100% no-repeat,
@@ -197,11 +195,9 @@ section{position:relative;padding:clamp(90px,13vh,150px) clamp(28px,7vw,120px)}
     linear-gradient(135deg,var(--steel),var(--charcoal)),
     repeating-linear-gradient(0deg,transparent 0 27px,var(--grid) 27px 28px),
     repeating-linear-gradient(90deg,transparent 0 27px,var(--grid) 27px 28px)}
-/* faint blueprint hatch + a single diagonal reference line for character */
 .plate::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:
   linear-gradient(115deg,transparent 49.6%,rgba(198,168,104,.10) 49.6% 50%,transparent 50%),
   radial-gradient(120% 120% at 84% 12%,rgba(198,168,104,.06),transparent 46%)}
-/* photographer's crop-mark corners — reads as "framed shot pending", not "broken box" */
 .plate::after{content:"";position:absolute;inset:13px;pointer-events:none;background:
   linear-gradient(var(--plate-accent),var(--plate-accent)) 0 0/16px 1px no-repeat,
   linear-gradient(var(--plate-accent),var(--plate-accent)) 0 0/1px 16px no-repeat,
@@ -216,7 +212,7 @@ section{position:relative;padding:clamp(90px,13vh,150px) clamp(28px,7vw,120px)}
 .plate .pslot{position:absolute;bottom:13px;right:15px;z-index:2;font-family:"Archivo";font-weight:800;font-size:10px;letter-spacing:.16em;color:var(--champagne);opacity:.8}
 .plate .pc{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:9px;width:82%;text-align:center}
 .plate .pc .k{font-family:"Fraunces",serif;font-style:italic;font-weight:400;font-size:clamp(14px,1.2vw,17px);color:var(--paper);line-height:1.25}
-.plate .pc::after{content:"IMAGE PENDING";font-family:"Archivo";font-weight:600;font-size:9px;letter-spacing:.3em;color:var(--concrete);padding-top:2px;border-top:1px solid var(--grid)}
+.plate .pc::after{content:"";display:none}
 .plate.tint-ox{background:linear-gradient(135deg,#2a1614,var(--charcoal)),repeating-linear-gradient(0deg,transparent 0 27px,var(--grid) 27px 28px),repeating-linear-gradient(90deg,transparent 0 27px,var(--grid) 27px 28px);--plate-accent:rgba(138,59,52,.5)}
 .plate.tint-sig{background:linear-gradient(135deg,#182019,var(--charcoal)),repeating-linear-gradient(0deg,transparent 0 27px,var(--grid) 27px 28px),repeating-linear-gradient(90deg,transparent 0 27px,var(--grid) 27px 28px);--plate-accent:rgba(91,110,99,.55)}
 
@@ -230,7 +226,7 @@ section{position:relative;padding:clamp(90px,13vh,150px) clamp(28px,7vw,120px)}
 .man .detailrow .plate{aspect-ratio:1/1}
 @media(max-width:820px){.man{grid-template-columns:1fr;gap:34px}.man .portrait{aspect-ratio:3/4}}
 
-/* ---------- Cinematic scene band — reusable (The Man, The Work) ---------- */
+/* ---------- Cinematic scene band ---------- */
 section.scene{padding:0}
 .scene{position:relative;height:100svh;min-height:560px;overflow:hidden;background:var(--ink);--scene-pos:center;--scene-pos-m:center}
 .scene .img{position:absolute;inset:0;background-image:var(--scene-img);background-size:cover;background-position:var(--scene-pos);transform:scale(1.05);transition:transform 2.6s var(--ease),opacity 1.4s ease;opacity:0}
@@ -273,13 +269,11 @@ section.scene{padding:0}
 .proj.feat{grid-column:span 3}
 .proj .img{aspect-ratio:16/10;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--steel),var(--charcoal))}
 .proj .img .cardimg{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
-/* branded crest tile (Heritage) */
 .brandtile{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;background:linear-gradient(135deg,#241d10,var(--charcoal))}
 .crest-mark.lg{width:64px;height:78px;font-size:32px}
 .brandtile .bt-name{font-family:"Archivo";font-weight:800;font-size:clamp(15px,1.5vw,18px);letter-spacing:.01em;color:var(--chalk)}
 .brandtile .bt-tag{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:14px;color:var(--champagne)}
 .proj .img .brand-photo{position:absolute;inset:0}
-/* Who works with us — side panel */
 .work-network{position:relative}
 .who-open{background:transparent;border:1px solid var(--line);color:var(--champagne);font-family:"Archivo";font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:11px 17px;cursor:pointer;transition:.3s;display:inline-flex;gap:9px;align-items:center;white-space:nowrap}
 .who-open:hover{background:var(--champagne);color:var(--ink)}
@@ -302,7 +296,7 @@ a.who-item:hover{color:var(--champagne)}
 .who-foot{margin-top:22px;font-size:13px;color:var(--concrete)}
 .who-foot a{color:var(--champagne)}
 @media(max-width:820px){.who-open{font-size:10px;padding:10px 14px}}
-/* ---------- Selected Work case study ---------- */
+/* ---------- Selected Work ---------- */
 .casework{background:var(--ink);border-top:1px solid var(--grid)}
 .case-head{max-width:70ch;margin-bottom:40px}
 .case-title{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(26px,3.6vw,46px);line-height:1.12;color:var(--chalk);margin-bottom:16px}
@@ -335,7 +329,6 @@ a.who-item:hover{color:var(--champagne)}
 .proj p{color:var(--concrete);font-size:13.5px;max-width:44ch}
 .proj .go{margin-top:18px;font-family:"Archivo";font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--champagne);display:inline-flex;gap:8px;align-items:center}
 .proj .go span{transition:transform .3s}.proj:hover .go span{transform:translateX(5px)}
-/* branded venture cards — each real venture gets its own accent, still inside the master system */
 .proj.branded{border-top:2px solid var(--brand)}
 .proj.branded:hover{border-color:var(--brand)}
 .proj.branded .status.active::before{background:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 22%,transparent)}
@@ -381,7 +374,6 @@ a.who-item:hover{color:var(--champagne)}
 @media(max-width:600px){.now-list .row{grid-template-columns:1fr;gap:6px}}
 
 /* ---------- CONNECT ---------- */
-/* ---------- CONNECT — full-bleed portrait + category-aware form ---------- */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .connect{position:relative;overflow:hidden;background:var(--ink);border-top:1px solid var(--grid);display:flex;align-items:center;min-height:100svh;padding-block:clamp(80px,10vh,130px)}
 .connect-bg{position:absolute;inset:0;background:url('connect-scene.png?v=2') 72% center/cover;transform:scale(1.05);opacity:0;transition:transform 2.4s var(--ease),opacity 1.3s ease}
@@ -392,19 +384,16 @@ a.who-item:hover{color:var(--champagne)}
 .connect-inner{position:relative;z-index:2;width:100%;max-width:640px}
 .connect .big{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(30px,4.4vw,58px);line-height:1.06;color:var(--chalk);margin-bottom:16px;text-shadow:0 6px 40px rgba(0,0,0,.6)}
 .connect-sub{color:var(--paper);font-size:clamp(14px,1.3vw,17px);line-height:1.5;max-width:44ch;margin-bottom:34px}
-/* topic cards (native radios for keyboard + single-select) */
 .topics{display:flex;flex-wrap:wrap;gap:9px;border:0;padding:0;margin:0 0 30px}
 .topic input{position:absolute;opacity:0;width:1px;height:1px}
 .topic span{display:inline-block;border:1px solid var(--line);color:var(--bone);font-family:"Archivo";font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:11px 17px;cursor:pointer;transition:.3s;background:rgba(11,11,12,.42);backdrop-filter:blur(4px)}
 .topic span:hover{border-color:var(--champagne)}
 .topic input:checked+span{background:var(--champagne);color:var(--ink);border-color:var(--champagne)}
 .topic input:focus-visible+span{outline:2px solid var(--champagne);outline-offset:3px}
-/* dynamic heading + secondary link */
 .cform-heading{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(20px,2.4vw,30px);line-height:1.2;color:var(--chalk);margin-bottom:6px}
 .cform-note{font-size:12px;letter-spacing:.02em;color:var(--concrete);margin-bottom:12px}
 .cform-link{display:inline-block;font-family:"Archivo";font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--champagne);margin-bottom:20px;transition:color .3s}
 .cform-link:hover{color:var(--chalk)}
-/* fields */
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px}
 .field{display:flex;flex-direction:column}
 .field.full{grid-column:1 / -1}
@@ -464,8 +453,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
 <div class="grid-overlay" aria-hidden="true"></div>
 <div class="rail left" aria-hidden="true">
   <span class="tick gold">AARONDUCHANE.COM</span>
-  <span class="tick">N 34° · W 117°</span>
-  <span class="tick">EST. [YEAR]</span>
+  <span class="tick">EST. 2009</span>
 </div>
 <div class="rail right" aria-hidden="true">
   <span class="tick">SHEET 01 / 08</span>
@@ -528,7 +516,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
   <section id="man" class="scene" style="--scene-img:url('man-scene.png?v=2');--scene-pos-m:center" aria-label="Aaron Duchane">
     <div class="img" role="img" aria-label="Aaron Duchane across six settings: a boardroom, an architectural studio, a construction site, a design office, an AI workstation, and quiet study with an open Bible"></div>
     <div class="veil" aria-hidden="true"></div>
-    <div class="tag"><span class="label">The Man</span><br><span class="label" style="color:var(--champagne)">Pomona, CA · 34.0553° N</span></div>
+    <div class="tag"><span class="label">The Man</span><br><span class="label" style="color:var(--champagne)">Becoming</span></div>
     <p class="scene-cap">One man. Several rooms. The same idea running through all of them.</p>
   </section>
 
@@ -548,8 +536,8 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
       </div>
       <div class="rv d2">
         <div class="detailrow">
-          <div class="plate"><span class="pmeta">DETAIL</span><span class="pslot">IMG-MAN-02</span><div class="pc"><div class="k">[ hands / notebook ]</div></div></div>
-          <div class="plate"><span class="pmeta">DETAIL</span><span class="pslot">IMG-MAN-03</span><div class="pc"><div class="k">[ cross / watch ]</div></div></div>
+          <div class="plate" role="img" aria-label="Detail — hands / notebook"></div>
+          <div class="plate" role="img" aria-label="Detail — cross / watch"></div>
         </div>
       </div>
     </div>
@@ -570,83 +558,75 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     <div class="work-network">
     <div class="projects">
 
+      <!-- 01 Heritage Protection Solutions -->
       <article class="proj feat rv branded" style="--brand:#C6A868">
-        <div class="img"><div class="brandtile"><div class="crest-mark lg" aria-hidden="true">H</div><div class="bt-name">Heritage Protection Solutions</div><div class="bt-tag">Protecting your lineage</div></div><img class="cardimg brand-photo" src="hps-family.jpg" alt="The Duchane family — the reason for the work" loading="lazy" onerror="this.remove()"></div>
+        <div class="img">
+          <div class="brandtile">
+            <img src="assets/brands/heritage-protection-logo.png" alt="Heritage Protection Solutions official crest" style="max-height:88px;width:auto;object-fit:contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div style="display:none;flex-direction:column;align-items:center;gap:8px"><div class="crest-mark lg" aria-hidden="true">H</div><div class="bt-name">Heritage Protection Solutions</div></div>
+            <div class="bt-tag">Protecting your lineage</div>
+          </div>
+          <img class="cardimg brand-photo" src="assets/images/work/heritage-protection.jpg" alt="Heritage Protection Solutions — family, protection, and generational planning" loading="lazy" onerror="this.style.display='none'">
+        </div>
         <div class="body">
           <div class="top"><span class="status active">Active</span><span class="spine">Protect</span></div>
           <h3>Heritage Protection Solutions</h3>
-          <p>Protection. Ownership. Generational strategy.</p>
+          <p>Financial education, protection strategy, retirement and estate-planning conversations, family protection, business-owner planning, and generational strategy.</p>
           <a class="go ext" href="https://www.heritageprosolutions.com/" target="_blank" rel="noopener">Explore Heritage Protection <span>&rarr;</span></a>
         </div>
       </article>
 
+      <!-- 02 Building Projects -->
       <article class="proj feat rv d1">
-        <div class="img"><img class="cardimg" src="proj-porch-front.jpg" alt="Completed front porch rebuild" loading="lazy"></div>
+        <div class="img">
+          <img class="cardimg" src="assets/images/work/building-projects.jpg" alt="Building Projects — design, construction, fire life safety, systems design" loading="lazy" onerror="this.style.display='none'">
+        </div>
         <div class="body">
           <div class="top"><span class="status active">Active</span><span class="spine">Build</span></div>
-          <h3>Fire Life Safety / Systems Design</h3>
-          <p>Fire-alarm and low-voltage design, construction documentation, coordination. The same protective instinct, expressed in blueprints instead of balance sheets.</p>
-          <a class="go" href="#work">Enter <span>&rarr;</span></a>
+          <h3>Building Projects</h3>
+          <p>Design, construction, fire life safety, low-voltage systems, coordination, and technical problem-solving across real-world projects. The same protective instinct, expressed in blueprints.</p>
+          <a class="go" href="#connect" data-topic="building">Discuss a project <span>&rarr;</span></a>
         </div>
       </article>
 
-      <article class="proj rv branded" style="--brand:#6E93B4">
-        <div class="img"><img class="cardimg" style="object-position:center 22%" src="https://faithmoneymentalhealth.com/founders/aaron-duchane.jpg" alt="Aaron Duchane — 3 Path Financial" loading="lazy"></div>
+      <!-- 03 3 Path Financial + Selah Monroe -->
+      <article class="proj feat rv branded" style="--brand:#6E93B4">
+        <div class="img">
+          <img class="cardimg" src="assets/images/work/three-path-selah.jpg" alt="3 Path Financial — financial education, media, and storytelling" loading="lazy" onerror="this.style.display='none'">
+        </div>
         <div class="body">
           <div class="top"><span class="status active">Active</span><span class="spine">Create</span></div>
           <h3>3 Path Financial</h3>
-          <p>Financial clarity, education, and a path forward.</p>
-          <a class="go ext" href="https://faithmoneymentalhealth.com/with/aaron" target="_blank" rel="noopener">Talk With Aaron <span>&rarr;</span></a>
+          <p>Financial education, media, campaigns, and storytelling that makes money concepts accessible. Featuring Selah Monroe — a virtual host and digital brand personality built to move ideas through lifestyle and media.</p>
+          <a class="go ext" href="https://faithmoneymentalhealth.com/with/aaron" target="_blank" rel="noopener">Explore 3 Path Financial <span>&rarr;</span></a>
         </div>
       </article>
 
-      <article class="proj rv d1 branded" style="--brand:#C77E57">
-        <div class="img"><img class="cardimg" src="https://fmmpodcast.com/images/group-photo.jpg" alt="Faith, Money & Mental Health podcast hosts" loading="lazy"></div>
-        <div class="body">
-          <div class="top"><span class="status active">Active</span><span class="spine">Create</span></div>
-          <h3>Faith, Money &amp; Mental Health</h3>
-          <p>Real conversations about faith, money, and mental health.</p>
-          <a class="go ext" href="https://fmmpodcast.com/" target="_blank" rel="noopener">Visit the Podcast <span>&rarr;</span></a>
+      <!-- 04 Technology & Innovation -->
+      <article class="proj feat rv d1">
+        <div class="img">
+          <img class="cardimg" src="assets/images/work/technology-innovation.jpg" alt="Technology and Innovation — AI, automation, apps, and systems" loading="lazy" onerror="this.style.display='none'">
         </div>
-      </article>
-
-      <article class="proj rv d1">
-        <div class="img"><div class="plate tint-sig" style="height:100%"><span class="pmeta">CREATIVE DIRECTION</span><span class="pslot">IMG-WORK-CD</span><div class="pc"><div class="k">[ cinematic frame ]</div></div></div></div>
         <div class="body">
           <div class="top"><span class="status building">Building</span><span class="spine">Create</span></div>
-          <h3>Creative Direction &amp; Media</h3>
-          <p>Design, film, brand development, AI-assisted creative workflows. Visual storytelling as a discipline, not a hobby.</p>
-          <a class="go" href="#work">Enter <span>&rarr;</span></a>
+          <h3>Technology &amp; Innovation</h3>
+          <p>Automation, AI-assisted workflows, vibe coding, software ideas, apps, and interactive tools. Projects include the Walk With Jesus Pocket Journal. Aaron uses technology to bring ideas into reality faster and more effectively.</p>
+          <a class="go" href="#connect" data-topic="technology">Start a conversation <span>&rarr;</span></a>
         </div>
       </article>
 
-      <article class="proj rv d2">
-        <div class="img"><div class="plate" style="height:100%"><span class="pmeta">TECHNOLOGY &amp; AI</span><span class="pslot">IMG-WORK-AI</span><div class="pc"><div class="k">[ generative / interface ]</div></div></div></div>
-        <div class="body">
-          <div class="top"><span class="status exploring">Exploring</span><span class="spine">Create</span></div>
-          <h3>Technology &amp; AI</h3>
-          <p>Automation, systems thinking, vibe coding, emerging creative tools. AI as an instrument in Aaron's hands.</p>
-          <a class="go" href="#work">Enter <span>&rarr;</span></a>
-        </div>
-      </article>
-
-      <article class="proj rv">
-        <div class="img"><div class="plate tint-ox" style="height:100%"><span class="pmeta">SELAH MONROE</span><span class="pslot">IMG-WORK-SM</span><div class="pc"><div class="k">[ digital brand persona ]</div></div></div></div>
-        <div class="body">
-          <div class="top"><span class="status exploring">Exploring</span><span class="spine">Create</span></div>
-          <h3>Selah Monroe</h3>
-          <p>A digital brand personality, a virtual lifestyle host built to tell stories and move ideas through media. A creative project, not a person.</p>
-          <a class="go" href="#work">Enter <span>&rarr;</span></a>
-        </div>
-      </article>
-
-      <article class="proj rv d1">
-        <div class="img"><div class="plate" style="height:100%"><span class="pmeta">METAHERO / PRODUCT</span><span class="pslot">IMG-WORK-FP</span><div class="pc"><div class="k">[ lookbook / apparel ]</div></div></div></div>
-        <div class="body">
-          <div class="top"><span class="status exploring">Exploring</span><span class="spine">Create</span></div>
-          <h3>Metahero &amp; Product Concepts</h3>
-          <p>Apparel and luxury concepts like Metahero, Duchéne, and future product work. [ADD DETAIL HERE]</p>
-          <a class="go" href="#work">Enter <span>&rarr;</span></a>
+      <!-- 05 Creative Direction, Media & Products -->
+      <article class="proj rv d1" style="grid-column:span 6">
+        <div style="display:grid;grid-template-columns:1fr 1.4fr;align-items:stretch">
+          <div class="img" style="aspect-ratio:unset;min-height:240px">
+            <img class="cardimg" src="assets/images/work/creative-media-products.jpg" alt="Creative Direction, Media and Products — design, film, apparel, brand" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="body" style="padding:28px 30px 30px">
+            <div class="top"><span class="status building">Building</span><span class="spine">Create</span></div>
+            <h3>Creative Direction, Media &amp; Products</h3>
+            <p>Video editing, cinematic storytelling, graphic design, branding, campaign development, AI-assisted creative work, apparel, and product concepts. This is where Metahero, Duchéne, and future store products live. Visual direction as a discipline — not a side project.</p>
+            <a class="go" href="#connect" data-topic="creative">Start a conversation <span>&rarr;</span></a>
+          </div>
         </div>
       </article>
 
@@ -655,20 +635,11 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     <aside class="who-panel" id="whoPanel" aria-hidden="true" aria-label="Who works with us">
       <div class="who-inner">
         <div class="who-top"><span class="label">Who works with us</span><button class="who-close" type="button" aria-label="Close panel">&times;</button></div>
-        <p class="who-intro">Good work is a team. These are the people and partners I build, design, and collaborate with.</p>
-        <div class="who-group">
-          <h5>Contractors</h5>
-          <a class="who-item" href="#" target="_blank" rel="noopener">[CONTRACTOR NAME]<span>[trade] ↗</span></a>
-          <div class="who-item muted">[ADD CONTRACTOR]<span>[trade]</span></div>
-        </div>
-        <div class="who-group">
-          <h5>Designers</h5>
-          <a class="who-item" href="#" target="_blank" rel="noopener">[DESIGNER NAME]<span>[focus] ↗</span></a>
-          <div class="who-item muted">[ADD DESIGNER]<span>[focus]</span></div>
-        </div>
+        <p class="who-intro">Different industries. Different challenges. The same commitment to solving what matters.</p>
+        <div id="whoPartners"><!-- populated by SITE_CONFIG.partners via JS --></div>
         <div class="who-group">
           <h5>Partner · Wellness</h5>
-          <a class="who-item" href="[LIVEGOOD URL — ADD]" target="_blank" rel="noopener">LiveGood<span>member-priced wellness ↗</span></a>
+          <a class="who-item" href="https://www.livegood.com/" target="_blank" rel="noopener">LiveGood<span>member-priced wellness ↗</span></a>
         </div>
         <p class="who-foot">Want to build with us? <a href="#connect">Get in touch ↗</a></p>
       </div>
@@ -681,7 +652,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     <div class="eyebrow rv"><span class="bar"></span><span class="label">Selected Work · Recent Build</span><span class="fig">Fig. 03.1</span></div>
     <div class="case-head rv">
       <h3 class="case-title">From framing plans to finished build.</h3>
-      <p class="case-sub">A full front porch rebuild in [ADD LOCATION]: foundation, deck framing, iron railing, and lattice skirting. Designed, documented, and executed end to end. <span class="case-tags"><em>Build</em><em>Systems Design</em></span></p>
+      <p class="case-sub">A full front porch rebuild in Pomona, CA: foundation, deck framing, iron railing, and lattice skirting. Designed, documented, and executed end to end. <span class="case-tags"><em>Build</em><em>Systems Design</em></span></p>
     </div>
     <div class="case-grid rv d1">
       <figure class="case-photo"><img src="proj-porch-front.jpg" alt="Completed front porch rebuild, street view"><figcaption>Completed · street view</figcaption></figure>
@@ -706,20 +677,20 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     </div>
     <div class="ideas-grid">
       <article class="idea lead rv">
-        <div class="cover"><div class="plate" style="height:100%"><span class="pmeta">FEATURED</span><span class="pslot">IMG-IDEA-01</span><div class="pc"><div class="k">[ featured cover ]</div></div></div></div>
-        <div class="meta"><span class="cat">Faith</span><span>Essay</span><span>[DATE]</span></div>
+        <div class="cover" style="background:var(--charcoal);border:1px solid var(--grid);aspect-ratio:16/10"></div>
+        <div class="meta"><span class="cat">Faith</span><span>Essay</span><span>Sep 2026</span></div>
         <h3>Stewardship is not a spectator sport.</h3>
-        <p>[ADD EXCERPT HERE]. On ownership, responsibility, and why building for other people is the point.</p>
+        <p>Stewardship is not something we watch other people practice. It is a way of being. For me, it begins with one underlying truth: God exists. When I include Him in the way I live, build, lead, protect, create, and make decisions, everything else begins to find its proper order.</p>
       </article>
       <article class="idea rv d1">
-        <div class="meta"><span class="cat">Systems Thinking</span><span>Note</span><span>[DATE]</span></div>
+        <div class="meta"><span class="cat">Systems Thinking</span><span>Note</span><span>Aug 2026</span></div>
         <h3>What AI actually changed about how I work.</h3>
-        <p>[ADD EXCERPT HERE]</p>
+        <p>I embraced AI because it became something I had always needed: a personal assistant capable of helping carry the weight of an idea. I used to spend countless hours manually building every individual piece. Now I can work with AI to handle portions of that heavy lifting while I stay focused on the vision, direction, judgment, and purpose. It hasn't replaced how I think. It has expanded what I'm able to build.</p>
       </article>
       <article class="idea rv d2">
-        <div class="meta"><span class="cat">Legacy Planning</span><span>Field Note</span><span>[DATE]</span></div>
+        <div class="meta"><span class="cat">Legacy Planning</span><span>Field Note</span><span>Jul 2026</span></div>
         <h3>Legacy is built, not left.</h3>
-        <p>[ADD EXCERPT HERE]. Protection before performance, and why the plan matters more than the pitch.</p>
+        <p>When I finally understood what mattered most, I made a decision: I would become one of the people in my family responsible for intentionally building legacy. Our children are the future. My responsibility is to take what was given to me, strengthen it, improve it, and place something better into their hands. Legacy isn't something we accidentally leave behind. Legacy is something we build while we're here.</p>
       </article>
     </div>
   </section>
@@ -730,9 +701,18 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     <span class="marker rv" aria-hidden="true">why any of it matters</span>
     <h2 class="rv d1">Leave people, families, and systems <i>stronger</i> than you found them.</h2>
     <div class="cols">
-      <div class="rv d1"><h4>Faith &amp; Family</h4><p>Faith sits underneath all of it, quietly and on purpose. Family is who it's for, built alongside my wife and partner. [ADD]</p></div>
-      <div class="rv d2"><h4>Protection &amp; Stewardship</h4><p>What you own, you're responsible for. Protect what matters before you chase what's next. [ADD]</p></div>
-      <div class="rv d3"><h4>Ownership &amp; Legacy</h4><p>Freedom follows responsibility. Think in generations, not quarters. Leave something worth inheriting. [ADD]</p></div>
+      <div class="rv d1">
+        <h4>Faith &amp; Family</h4>
+        <p>Faith sits underneath all of it, quietly and on purpose. It's not the loudest thing in the room — it's the thing that determines how I show up in every room. Family is who it's for. Every build, every plan, every creative decision runs through that filter first.</p>
+      </div>
+      <div class="rv d2">
+        <h4>Protection &amp; Stewardship</h4>
+        <p>What you own, you're responsible for. Protect what matters before you chase what's next. I've seen what happens when people build wealth without a plan to protect it. The goal isn't accumulation — it's security for the people who depend on you.</p>
+      </div>
+      <div class="rv d3">
+        <h4>Ownership &amp; Legacy</h4>
+        <p>Freedom follows responsibility. Think in generations, not quarters. The decisions made today either compound into something worth inheriting or they don't. I want everything I build to still be standing — and still be useful — long after I'm done building it.</p>
+      </div>
     </div>
   </section>
 
@@ -746,13 +726,13 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     <div class="eyebrow rv"><span class="bar"></span><span class="label">Now · In Progress</span><span class="fig">Fig. 06</span></div>
     <div class="now-head">
       <p class="rv lead-intro" style="max-width:38ch">What I'm building, learning, and paying attention to right now.</p>
-      <span class="stamp rv d1" aria-hidden="true">updated [DATE]</span>
+      <span class="stamp rv d1" aria-hidden="true">updated Sep 2026</span>
     </div>
     <div class="now-list rv d1">
-      <div class="row"><span class="k">Building</span><span class="v"><b>[ADD]</b>, the current focus at Heritage Protection Solutions.</span></div>
-      <div class="row"><span class="k">Learning</span><span class="v">[ADD], a skill, a book, a system he's studying right now.</span></div>
-      <div class="row"><span class="k">Creating</span><span class="v">[ADD], an active creative or media experiment.</span></div>
-      <div class="row"><span class="k">Reading</span><span class="v">[ADD], currently on the desk.</span></div>
+      <div class="row"><span class="k">Building</span><span class="v">Legacy — and a deeper personal understanding of who I am and what I am supposed to do. That means growing Heritage Protection Solutions, developing this site as a living ecosystem, and executing across every room I'm in with more intention.</span></div>
+      <div class="row"><span class="k">Creating</span><span class="v">Innovative tools that raise the bar on processes and create more efficiency in our lives and businesses. If it can be built better, I want to build it.</span></div>
+      <div class="row"><span class="k">Learning</span><span class="v">How to have faith in everything I do. Be bold. Be confident. Trust in the Lord.</span></div>
+      <div class="row"><span class="k">Reading</span><span class="v"><b>The Bible.</b> I read and study many subjects, but I keep returning to Scripture — it contains the information and foundation that has carried me this far and continues taking me further than I've been.</span></div>
     </div>
   </section>
 
@@ -763,7 +743,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     <div class="connect-inner">
     <div class="eyebrow rv"><span class="bar"></span><span class="label">Connect</span><span class="fig">Fig. 07</span></div>
     <h2 class="big rv">Connect with me.</h2>
-    <p class="connect-sub rv d1">If something I'm building, thinking about, or working on overlaps with something you're trying to accomplish, reach out.</p>
+    <p class="connect-sub rv d1">If something I'm building, thinking about, or working on overlaps with something you're trying to accomplish — reach out.</p>
 
     <form class="cform rv d2" id="connectForm" novalidate>
       <fieldset class="topics">
@@ -835,159 +815,268 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
       <span class="marker" aria-hidden="true">build well.</span>
     </div>
     <div class="foot-cols">
-      <div class="col"><h5>Site</h5><a href="#man">The Man</a><a href="#work">The Work</a><a href="#mission">The Mission</a><a href="#ideas">Ideas</a><a href="#now">Now</a></div>
-      <div class="col"><h5>Ventures</h5><a href="https://www.heritageprosolutions.com/" target="_blank" rel="noopener">Heritage Protection ↗</a><a href="https://faithmoneymentalhealth.com/with/aaron" target="_blank" rel="noopener">3 Path Financial ↗</a><a href="https://fmmpodcast.com/" target="_blank" rel="noopener">Faith, Money &amp; Mental Health ↗</a><a href="#work">Fire Life Safety</a><a href="#work">Creative Direction</a></div>
-      <div class="col"><h5>Connect</h5><a href="#connect">Get in touch</a><a href="#connect">[ADD SOCIAL]</a><a href="#connect">[ADD SOCIAL]</a></div>
+      <div class="col">
+        <h5>Site</h5>
+        <a href="#man">The Man</a>
+        <a href="#work">The Work</a>
+        <a href="#mission">The Mission</a>
+        <a href="#ideas">Ideas</a>
+        <a href="#now">Now</a>
+      </div>
+      <div class="col">
+        <h5>Ventures</h5>
+        <a href="https://www.heritageprosolutions.com/" target="_blank" rel="noopener">Heritage Protection ↗</a>
+        <a href="https://faithmoneymentalhealth.com/with/aaron" target="_blank" rel="noopener">3 Path Financial ↗</a>
+        <a href="https://fmmpodcast.com/" target="_blank" rel="noopener">Podcast ↗</a>
+        <a href="#work">Building Projects</a>
+        <a href="#work">Technology &amp; Innovation</a>
+        <a href="#work">Creative Direction</a>
+      </div>
+      <div class="col" id="footSocialCol">
+        <h5>Connect</h5>
+        <a href="#connect">Get in touch</a>
+        <!-- Social links rendered by JS from SITE_CONFIG.social -->
+      </div>
     </div>
   </div>
   <div class="foot-bottom">
     <div class="crest" title="Heritage Protection Solutions">
-      <div class="crest-mark" aria-hidden="true">H</div>
-      <div class="crest-cap">Heritage Protection Solutions<br><span>[ official crest / IMG-CREST ]</span></div>
+      <img src="assets/brands/heritage-protection-logo.png" alt="Heritage Protection Solutions" style="height:46px;width:auto;object-fit:contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="crest-mark" aria-hidden="true" style="display:none">H</div>
+      <div class="crest-cap">Heritage Protection Solutions<br><span>Protecting your lineage</span></div>
     </div>
     <span class="foot-meta">© <span id="yr"></span> Aaron Duchane · The Man. The Work. The Mission.</span>
   </div>
 </footer>
 
 <script>
-document.getElementById('yr').textContent=new Date().getFullYear();
-// hero
-requestAnimationFrame(()=>document.getElementById('hero').classList.add('ready'));
-// nav solidify
-const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>60),{passive:true});
-// mobile menu
-const b=document.getElementById('burger'),m=document.getElementById('menu');
-b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o)});
-m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded',false)}));
-// reveals
-const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-// cinematic band reveal (scale settle), respects reduced-motion via CSS media query
-const so=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');so.unobserve(e.target);}}),{threshold:.2});
-document.querySelectorAll('.scene, .connect').forEach(s=>so.observe(s));
-// ===== Connect: category-aware form =====
-// Set this to your Formspree/Basin/Getform endpoint. Until then, the form
-// falls back to opening a pre-filled email to aaron@aaronduchane.com.
-const FORM_ENDPOINT = "[ADD FORM ENDPOINT]";
-const CONNECT_EMAIL = "aaron@aaronduchane.com";
-const TOPICS = {
-  protection:{full:"Heritage Protection Solutions",heading:"What are you trying to protect or prepare for?",prompt:"Tell me what's on your mind: family protection, retirement, estate planning, business planning, legacy, or something else.",link:{t:"Explore Heritage Protection \u2192",u:"https://www.heritageprosolutions.com/"},subject:"Protection Inquiry"},
-  building:{full:"Building Projects",heading:"Tell me about the project.",prompt:"What are you building, where are you in the process, and what kind of help, design, coordination, or collaboration are you looking for?",subject:"Building Projects Inquiry"},
-  "3path":{full:"3 Path Financial",heading:"What are you looking to build with 3 Path?",prompt:"Tell me about the audience, idea, campaign, collaboration, or financial conversation you're trying to create.",link:{t:"Talk With Aaron \u2192",u:"https://faithmoneymentalhealth.com/with/aaron"},note:"Includes Selah Monroe \u00b7 Virtual Host / Digital Brand Personality.",subject:"3 Path Financial Inquiry"},
-  technology:{full:"Technology & Innovation",heading:"What are you trying to build or improve?",prompt:"Tell me about the idea, workflow, tool, problem, prototype, or system you're exploring.",subject:"Technology & Innovation Inquiry"},
-  creative:{full:"Creative Direction, Media & Products",heading:"Tell me what you're creating.",prompt:"What are you designing, filming, editing, launching, wearing, selling, or trying to communicate?",subject:"Creative Direction Inquiry"},
-  podcast:{full:"Faith, Money & Mental Health",heading:"Let's talk about the conversation.",prompt:"Are you reaching out about the podcast, a guest opportunity, interview, topic idea, collaboration, or media request?",link:{t:"Visit Faith, Money & Mental Health \u2192",u:"https://fmmpodcast.com/"},subject:"Podcast Inquiry"},
-  other:{full:"Something Else",heading:"What's on your mind?",prompt:"If it doesn't fit neatly into one of the other categories, tell me what you're thinking about.",subject:"General Inquiry"}
+/* ============================================================
+   SITE CONFIGURATION — edit these values only
+   ============================================================ */
+const SITE_CONFIG = {
+  siteUrl:      "https://aaronduchane.com",
+  email:        "aaron@aaronduchane.com",
+  // Formspree: create account at formspree.io → New Form → paste endpoint below
+  formEndpoint: "[ADD FORMSPREE ENDPOINT]",
+  social: {
+    instagram: "",  // e.g. "https://instagram.com/yourhandle"
+    facebook:  "",
+    linkedin:  "",
+    youtube:   "",
+    tiktok:    "",
+    twitter:   ""
+  },
+  ventures: {
+    heritageProtection: "https://www.heritageprosolutions.com/",
+    threePath:          "https://faithmoneymentalhealth.com/with/aaron",
+    podcast:            "https://fmmpodcast.com/",
+    store:              ""  // ADD store URL when ready
+  },
+  selah: {
+    facebook:  "",  // ADD Selah Monroe Facebook URL
+    instagram: ""   // ADD Selah Monroe Instagram URL
+  },
+  partners: [
+    // ADD partner/carrier/company objects here when ready:
+    // { name: "Company Name", category: "Category", url: "https://...", logo: "" }
+  ]
 };
-(function(){
-  const form=document.getElementById('connectForm'); if(!form) return;
-  const $=id=>document.getElementById(id);
-  const heading=$('cfHeading'),note=$('cfNote'),link=$('cfLink'),prompt=$('cfPrompt'),
-        status=$('cfStatus'),phoneOpt=$('phoneOpt'),contact=$('cf-contact'),
-        success=$('connectSuccess');
-  function selectedKey(){const r=form.querySelector('input[name=topic]:checked');return r?r.value:null;}
-  function applyTopic(){
-    const t=TOPICS[selectedKey()];
-    if(!t){heading.textContent="What can I help you with?";note.hidden=true;link.hidden=true;prompt.textContent="Tell me what's on your mind.";return;}
-    heading.textContent=t.heading; prompt.textContent=t.prompt;
-    if(t.note){note.textContent=t.note;note.hidden=false;}else{note.hidden=true;}
-    if(t.link){link.textContent=t.link.t;link.href=t.link.u;link.hidden=false;}else{link.hidden=true;}
+/* ============================================================ */
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// hero ready
+requestAnimationFrame(() => document.getElementById('hero').classList.add('ready'));
+
+// nav solidify on scroll
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 60), { passive: true });
+
+// mobile menu
+const b = document.getElementById('burger'), m = document.getElementById('menu');
+b.addEventListener('click', () => {
+  const o = m.classList.toggle('open');
+  b.classList.toggle('open', o);
+  b.setAttribute('aria-expanded', o);
+});
+m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  m.classList.remove('open'); b.classList.remove('open'); b.setAttribute('aria-expanded', false);
+}));
+
+// intersection reveals
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: .14 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+// cinematic scene + connect reveal
+const so = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); so.unobserve(e.target); }
+}), { threshold: .2 });
+document.querySelectorAll('.scene, .connect').forEach(s => so.observe(s));
+
+// ===== Social links (footer) — rendered from SITE_CONFIG =====
+(function() {
+  const col = document.getElementById('footSocialCol'); if (!col) return;
+  const labels = { instagram:'Instagram', facebook:'Facebook', linkedin:'LinkedIn', youtube:'YouTube', tiktok:'TikTok', twitter:'Twitter/X' };
+  const links = Object.entries(SITE_CONFIG.social).filter(([,u]) => u && u.trim());
+  links.forEach(([k,u]) => { const a = document.createElement('a'); a.href = u; a.target = '_blank'; a.rel = 'noopener'; a.textContent = labels[k] + ' ↗'; col.appendChild(a); });
+})();
+
+// ===== Who Works With — render partners from SITE_CONFIG =====
+(function() {
+  const container = document.getElementById('whoPartners'); if (!container) return;
+  const whoOpen = document.querySelector('.who-open');
+  const ps = SITE_CONFIG.partners || [];
+  if (!ps.length) return; // button still shows; LiveGood entry still visible
+  const grouped = {};
+  ps.forEach(p => { (grouped[p.category] = grouped[p.category] || []).push(p); });
+  Object.entries(grouped).forEach(([cat, items]) => {
+    const g = document.createElement('div'); g.className = 'who-group';
+    const h = document.createElement('h5'); h.textContent = cat; g.appendChild(h);
+    items.forEach(p => {
+      const el = p.url ? document.createElement('a') : document.createElement('div');
+      el.className = 'who-item'; el.textContent = p.name;
+      if (p.url) { el.href = p.url; el.target = '_blank'; el.rel = 'noopener'; }
+      const s = document.createElement('span'); s.textContent = p.category;
+      el.appendChild(s); g.appendChild(el);
+    });
+    container.appendChild(g);
+  });
+})();
+
+// ===== Project card topic routing =====
+document.querySelectorAll('.proj .go[data-topic]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const topic = link.dataset.topic;
+    const radio = document.querySelector(`input[name="topic"][value="${topic}"]`);
+    if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change', { bubbles: true })); }
+    document.getElementById('connect').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ===== Connect: category-aware form =====
+const FORM_ENDPOINT = SITE_CONFIG.formEndpoint;
+const CONNECT_EMAIL = SITE_CONFIG.email;
+
+const TOPICS = {
+  protection: { full: "Heritage Protection Solutions", heading: "What are you trying to protect or prepare for?", prompt: "Tell me what's on your mind: family protection, retirement, estate planning, business planning, legacy, or something else.", link: { t: "Explore Heritage Protection →", u: SITE_CONFIG.ventures.heritageProtection }, subject: "Protection Inquiry" },
+  building:   { full: "Building Projects", heading: "Tell me about the project.", prompt: "What are you building, where are you in the process, and what kind of help, design, coordination, or collaboration are you looking for?", subject: "Building Projects Inquiry" },
+  "3path":    { full: "3 Path Financial", heading: "What are you looking to build with 3 Path?", prompt: "Tell me about the audience, idea, campaign, collaboration, or financial conversation you're trying to create.", link: { t: "Talk With Aaron →", u: SITE_CONFIG.ventures.threePath }, note: "Includes Selah Monroe · Virtual Host / Digital Brand Personality.", subject: "3 Path Financial Inquiry" },
+  technology: { full: "Technology & Innovation", heading: "What are you trying to build or improve?", prompt: "Tell me about the idea, workflow, tool, problem, prototype, or system you're exploring.", subject: "Technology & Innovation Inquiry" },
+  creative:   { full: "Creative Direction, Media & Products", heading: "Tell me what you're creating.", prompt: "What are you designing, filming, editing, launching, wearing, selling, or trying to communicate?", subject: "Creative Direction Inquiry" },
+  podcast:    { full: "Faith, Money & Mental Health", heading: "Let's talk about the conversation.", prompt: "Are you reaching out about the podcast, a guest opportunity, interview, topic idea, collaboration, or media request?", link: { t: "Visit the Podcast →", u: SITE_CONFIG.ventures.podcast }, subject: "Podcast Inquiry" },
+  other:      { full: "Something Else", heading: "What's on your mind?", prompt: "If it doesn't fit neatly into one of the other categories, tell me what you're thinking about.", subject: "General Inquiry" }
+};
+
+(function () {
+  const form = document.getElementById('connectForm'); if (!form) return;
+  const $ = id => document.getElementById(id);
+  const heading = $('cfHeading'), note = $('cfNote'), link = $('cfLink'), prompt = $('cfPrompt'),
+        status = $('cfStatus'), phoneOpt = $('phoneOpt'), contact = $('cf-contact'),
+        success = $('connectSuccess');
+
+  function selectedKey() { const r = form.querySelector('input[name=topic]:checked'); return r ? r.value : null; }
+  function applyTopic() {
+    const t = TOPICS[selectedKey()];
+    if (!t) { heading.textContent = "What can I help you with?"; note.hidden = true; link.hidden = true; prompt.textContent = "Tell me what's on your mind."; return; }
+    heading.textContent = t.heading; prompt.textContent = t.prompt;
+    if (t.note) { note.textContent = t.note; note.hidden = false; } else { note.hidden = true; }
+    if (t.link) { link.textContent = t.link.t; link.href = t.link.u; link.hidden = false; } else { link.hidden = true; }
   }
-  form.querySelectorAll('input[name=topic]').forEach(r=>r.addEventListener('change',applyTopic));
-  // phone requirement follows preferred contact
-  function phoneRequired(){return contact.value==='Phone'||contact.value==='Text';}
-  contact.addEventListener('change',()=>{phoneOpt.textContent=phoneRequired()?'(required)':'(optional)';});
-  // validation
-  function setErr(id,msg){const el=$('cf-'+id),e=$('err-'+id);if(e)e.textContent=msg||'';if(el)el.setAttribute('aria-invalid',msg?'true':'false');return !msg;}
-  function validate(){
-    let ok=true, first=null;
-    const v=id=>$('cf-'+id).value.trim();
-    if(!v('name')){setErr('name','Please add your name.');ok=false;first=first||'cf-name';}else setErr('name','');
-    const email=v('email');
-    if(!email){setErr('email','Please add your email.');ok=false;first=first||'cf-email';}
-    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){setErr('email','Please check your email.');ok=false;first=first||'cf-email';}
-    else setErr('email','');
-    if(phoneRequired()&&!v('phone')){setErr('phone','A phone number is needed for '+contact.value.toLowerCase()+'.');ok=false;first=first||'cf-phone';}else setErr('phone','');
-    if(!v('message')){setErr('message','Please add a short message.');ok=false;first=first||'cf-message';}else setErr('message','');
-    if(first)$(first).focus();
+  form.querySelectorAll('input[name=topic]').forEach(r => r.addEventListener('change', applyTopic));
+
+  function phoneRequired() { return contact.value === 'Phone' || contact.value === 'Text'; }
+  contact.addEventListener('change', () => { phoneOpt.textContent = phoneRequired() ? '(required)' : '(optional)'; });
+
+  function setErr(id, msg) { const el = $('cf-' + id), e = $('err-' + id); if (e) e.textContent = msg || ''; if (el) el.setAttribute('aria-invalid', msg ? 'true' : 'false'); return !msg; }
+  function validate() {
+    let ok = true, first = null;
+    const v = id => $('cf-' + id).value.trim();
+    if (!v('name')) { setErr('name', 'Please add your name.'); ok = false; first = first || 'cf-name'; } else setErr('name', '');
+    const email = v('email');
+    if (!email) { setErr('email', 'Please add your email.'); ok = false; first = first || 'cf-email'; }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setErr('email', 'Please check your email.'); ok = false; first = first || 'cf-email'; }
+    else setErr('email', '');
+    if (phoneRequired() && !v('phone')) { setErr('phone', 'A phone number is needed for ' + contact.value.toLowerCase() + '.'); ok = false; first = first || 'cf-phone'; } else setErr('phone', '');
+    if (!v('message')) { setErr('message', 'Please add a short message.'); ok = false; first = first || 'cf-message'; } else setErr('message', '');
+    if (first) $(first).focus();
     return ok;
   }
-  function showSuccess(){form.hidden=true;success.hidden=false;success.focus();success.scrollIntoView({block:'center',behavior:'smooth'});}
-  form.addEventListener('submit',async e=>{
-    e.preventDefault(); status.textContent='';
-    if(!validate())return;
-    const t=TOPICS[selectedKey()]||TOPICS.other;
-    const d={
-      name:$('cf-name').value.trim(), email:$('cf-email').value.trim(),
-      phone:$('cf-phone').value.trim(), contact:contact.value,
-      topic:t.full, message:$('cf-message').value.trim()
+  function showSuccess() { form.hidden = true; success.hidden = false; success.focus(); success.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+  form.addEventListener('submit', async e => {
+    e.preventDefault(); status.textContent = '';
+    if (!validate()) return;
+    const t = TOPICS[selectedKey()] || TOPICS.other;
+    const d = {
+      name: $('cf-name').value.trim(), email: $('cf-email').value.trim(),
+      phone: $('cf-phone').value.trim(), contact: contact.value,
+      topic: t.full, message: $('cf-message').value.trim()
     };
-    const subject="[AaronDuchane.com] "+t.subject;
-    if(/^https?:\/\//.test(FORM_ENDPOINT)){
-      status.textContent='Sending…';
-      try{
-        const res=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
-          body:JSON.stringify({name:d.name,email:d.email,phone:d.phone,'Preferred contact':d.contact,Topic:d.topic,message:d.message,_subject:subject,_replyto:d.email})});
-        if(res.ok)showSuccess();
-        else status.textContent='Something went wrong. Please email '+CONNECT_EMAIL+'.';
-      }catch(err){status.textContent='Network issue. Please email '+CONNECT_EMAIL+'.';}
-    }else{
-      // functional fallback until an endpoint is configured
-      const body=`Name: ${d.name}\nEmail: ${d.email}\nPhone: ${d.phone||'—'}\nPreferred contact: ${d.contact}\nTopic: ${d.topic}\n\n${d.message}`;
-      window.location.href=`mailto:${CONNECT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const subject = "[AaronDuchane.com] " + t.subject;
+    if (/^https?:\/\//.test(FORM_ENDPOINT)) {
+      status.textContent = 'Sending…';
+      try {
+        const res = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ name: d.name, email: d.email, phone: d.phone, 'Preferred contact': d.contact, Topic: d.topic, message: d.message, _subject: subject, _replyto: d.email }) });
+        if (res.ok) showSuccess();
+        else status.textContent = 'Something went wrong. Please email ' + CONNECT_EMAIL + '.';
+      } catch (err) { status.textContent = 'Network issue. Please email ' + CONNECT_EMAIL + '.'; }
+    } else {
+      const body = `Name: ${d.name}\nEmail: ${d.email}\nPhone: ${d.phone || '—'}\nPreferred contact: ${d.contact}\nTopic: ${d.topic}\n\n${d.message}`;
+      window.location.href = `mailto:${CONNECT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       showSuccess();
     }
   });
 })();
 
-// Who works with us — side panel (click/tap, Esc, backdrop; desktop opens on hovering the projects)
-(function(){
-  const wp=document.getElementById('whoPanel'); if(!wp) return;
-  const btn=document.querySelector('.who-open'), close=document.querySelector('.who-close'),
-        bd=document.querySelector('.who-backdrop'), net=document.querySelector('.work-network'),
-        grid=document.querySelector('.projects'), big=matchMedia('(min-width:821px)');
+// ===== Who works with us panel =====
+(function () {
+  const wp = document.getElementById('whoPanel'); if (!wp) return;
+  const btn = document.querySelector('.who-open'), close = document.querySelector('.who-close'),
+        bd = document.querySelector('.who-backdrop'), net = document.querySelector('.work-network'),
+        grid = document.querySelector('.projects'), big = matchMedia('(min-width:821px)');
   let hoverT, closeT;
-  const open=()=>{clearTimeout(closeT);wp.classList.add('open');bd&&bd.classList.add('open');wp.setAttribute('aria-hidden','false');btn&&btn.setAttribute('aria-expanded','true');};
-  const shut=()=>{wp.classList.remove('open');bd&&bd.classList.remove('open');wp.setAttribute('aria-hidden','true');btn&&btn.setAttribute('aria-expanded','false');};
-  btn&&btn.addEventListener('click',()=>wp.classList.contains('open')?shut():open());
-  close&&close.addEventListener('click',shut);
-  bd&&bd.addEventListener('click',shut);
-  addEventListener('keydown',e=>{if(e.key==='Escape')shut();});
-  if(grid&&net){
-    grid.addEventListener('mouseenter',()=>{if(big.matches){clearTimeout(closeT);hoverT=setTimeout(open,220);}});
-    grid.addEventListener('mouseleave',()=>clearTimeout(hoverT));
-    net.addEventListener('mouseenter',()=>clearTimeout(closeT));
-    net.addEventListener('mouseleave',()=>{if(big.matches)closeT=setTimeout(shut,350);});
+  const open = () => { clearTimeout(closeT); wp.classList.add('open'); bd && bd.classList.add('open'); wp.setAttribute('aria-hidden', 'false'); btn && btn.setAttribute('aria-expanded', 'true'); };
+  const shut = () => { wp.classList.remove('open'); bd && bd.classList.remove('open'); wp.setAttribute('aria-hidden', 'true'); btn && btn.setAttribute('aria-expanded', 'false'); };
+  btn && btn.addEventListener('click', () => wp.classList.contains('open') ? shut() : open());
+  close && close.addEventListener('click', shut);
+  bd && bd.addEventListener('click', shut);
+  addEventListener('keydown', e => { if (e.key === 'Escape') shut(); });
+  if (grid && net) {
+    grid.addEventListener('mouseenter', () => { if (big.matches) { clearTimeout(closeT); hoverT = setTimeout(open, 220); } });
+    grid.addEventListener('mouseleave', () => clearTimeout(hoverT));
+    net.addEventListener('mouseenter', () => clearTimeout(closeT));
+    net.addEventListener('mouseleave', () => { if (big.matches) closeT = setTimeout(shut, 350); });
   }
 })();
 
-// hero scroll parallax — four planes, small speeds, gated for mobile + reduced-motion
-(function(){
-  const hero=document.getElementById('hero');
-  const pBg=hero.querySelector('.p-bg'), pFig=hero.querySelector('.p-fig'),
-        pLines=hero.querySelector('.p-lines'), inner=hero.querySelector('.hero-inner'),
-        marker=hero.querySelector('.hero-marker');
-  const rm=matchMedia('(prefers-reduced-motion:reduce)'), big=matchMedia('(min-width:821px)');
-  let H=hero.offsetHeight, on=false, ticking=false;
-  const BG_CAP=42;                                   // keep bg/figure gap small → no inpaint reveal
-  function clear(){[pBg,pFig,pLines,inner].forEach(el=>el.style.transform='');inner.style.opacity='';if(marker)marker.style.opacity='';}
-  function evalOn(){on=big.matches&&!rm.matches;hero.classList.toggle('motion',on);if(!on)clear();else frame();}
-  function frame(){
-    ticking=false;
-    const y=window.scrollY; if(y>H+40) return;
-    const bg=Math.min(y*0.05,BG_CAP);
-    pLines.style.transform='translate3d(0,'+(y*0.16)+'px,0)';
-    pBg.style.transform  ='translate3d(0,'+bg+'px,0)';
-    inner.style.transform='translate3d(0,'+(y*0.11)+'px,0)';   // name sinks → figure reads as closest
-    pFig.style.transform ='translate3d(0,0,0)';                 // subject holds
-    inner.style.opacity=Math.max(0,1-y/H*1.25);
-    if(marker) marker.style.opacity=Math.max(0,1-y/H*1.7);
+// ===== Hero scroll parallax =====
+(function () {
+  const hero = document.getElementById('hero');
+  const pBg = hero.querySelector('.p-bg'), pFig = hero.querySelector('.p-fig'),
+        pLines = hero.querySelector('.p-lines'), inner = hero.querySelector('.hero-inner'),
+        marker = hero.querySelector('.hero-marker');
+  const rm = matchMedia('(prefers-reduced-motion:reduce)'), big = matchMedia('(min-width:821px)');
+  let H = hero.offsetHeight, on = false, ticking = false;
+  const BG_CAP = 42;
+  function clear() { [pBg, pFig, pLines, inner].forEach(el => el.style.transform = ''); inner.style.opacity = ''; if (marker) marker.style.opacity = ''; }
+  function evalOn() { on = big.matches && !rm.matches; hero.classList.toggle('motion', on); if (!on) clear(); else frame(); }
+  function frame() {
+    ticking = false;
+    const y = window.scrollY; if (y > H + 40) return;
+    const bg = Math.min(y * 0.05, BG_CAP);
+    pLines.style.transform = 'translate3d(0,' + (y * 0.16) + 'px,0)';
+    pBg.style.transform    = 'translate3d(0,' + bg + 'px,0)';
+    inner.style.transform  = 'translate3d(0,' + (y * 0.11) + 'px,0)';
+    pFig.style.transform   = 'translate3d(0,0,0)';
+    inner.style.opacity    = Math.max(0, 1 - y / H * 1.25);
+    if (marker) marker.style.opacity = Math.max(0, 1 - y / H * 1.7);
   }
-  addEventListener('scroll',()=>{if(on&&!ticking){ticking=true;requestAnimationFrame(frame);}},{passive:true});
-  addEventListener('resize',()=>{H=hero.offsetHeight;evalOn();});
-  rm.addEventListener&&rm.addEventListener('change',evalOn);
-  big.addEventListener&&big.addEventListener('change',evalOn);
+  addEventListener('scroll', () => { if (on && !ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+  addEventListener('resize', () => { H = hero.offsetHeight; evalOn(); });
+  rm.addEventListener && rm.addEventListener('change', evalOn);
+  big.addEventListener && big.addEventListener('change', evalOn);
   evalOn();
 })();
 </script>
