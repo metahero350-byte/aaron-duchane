@@ -281,19 +281,15 @@ section.scene{padding:0}
 .who-backdrop{display:none}
 .who-panel{position:fixed;top:50%;right:0;height:auto;max-height:min(480px,80vh);width:min(300px,80vw);background:var(--charcoal);border:1px solid var(--line);border-right:none;border-radius:8px 0 0 8px;transform:translateX(calc(100% - 6px));transition:transform .45s var(--ease);z-index:80;overflow:visible;box-shadow:-12px 0 40px rgba(0,0,0,.4);translate:0 -50%}
 .who-panel:hover,.who-panel.open{transform:translateX(0)}
-/* gold pull-tab that peeks when panel is resting */
+/* key-shaped pull-tab that peeks when panel is resting */
 .who-panel::before{
-  content:"WHO ↗";
+  content:"";
   position:absolute;right:calc(100% - 1px);top:50%;transform:translateY(-50%);
-  width:30px;height:96px;
-  background:var(--champagne);color:var(--ink);
-  display:flex;align-items:center;justify-content:center;
-  writing-mode:vertical-rl;text-orientation:mixed;
-  font-family:"Archivo";font-weight:800;font-size:9px;letter-spacing:.26em;text-transform:uppercase;
-  border-radius:6px 0 0 6px;
-  box-shadow:-6px 0 22px rgba(0,0,0,.5);
-  cursor:pointer;transition:background .3s,opacity .3s;
-  pointer-events:none;/* panel hover handles interaction */
+  width:34px;height:100px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 100'%3E%3C!-- bow --%3E%3Ccircle cx='17' cy='19' r='16' fill='%23C6A868'/%3E%3Ccircle cx='17' cy='19' r='9' fill='%23151619'/%3E%3C!-- blade --%3E%3Crect x='12' y='32' width='9' height='57' rx='2' fill='%23C6A868'/%3E%3C!-- teeth --%3E%3Crect x='21' y='52' width='7' height='6' rx='1.5' fill='%23C6A868'/%3E%3Crect x='21' y='65' width='7' height='6' rx='1.5' fill='%23C6A868'/%3E%3Crect x='21' y='78' width='7' height='5' rx='1.5' fill='%23C6A868'/%3E%3C/svg%3E") center/contain no-repeat;
+  filter:drop-shadow(-5px 2px 18px rgba(0,0,0,.65));
+  cursor:pointer;transition:opacity .35s,filter .35s;
+  pointer-events:none;
 }
 .who-panel:hover::before,.who-panel.open::before{opacity:0;pointer-events:none}
 /* inner scroll area */
