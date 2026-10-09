@@ -364,6 +364,14 @@ a.who-item:hover{color:var(--champagne)}
 @media(max-width:820px){.ideas-grid{grid-template-columns:1fr;gap:38px}}
 
 /* ---------- MISSION ---------- */
+.path{padding-block:clamp(90px,14vh,160px);text-align:center;border-top:1px solid var(--line)}
+.path h2{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(28px,4.6vw,60px);line-height:1.15;color:var(--chalk);max-width:22ch;margin:18px auto 14px}
+.path .lede{color:var(--bone);opacity:.85;max-width:56ch;margin:0 auto 34px;line-height:1.7}
+.path-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.path-btn{font-family:"Archivo";font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:16px 22px;border:1px solid var(--champagne);color:var(--champagne);text-decoration:none;transition:background .3s,color .3s}
+.path-btn.primary{background:var(--champagne);color:var(--ink)}
+.path-btn:hover{background:var(--chalk);color:var(--ink);border-color:var(--chalk)}
+.lic{font-size:11px;line-height:1.6;color:var(--concrete);max-width:70ch;margin:28px auto 0}
 .mission{text-align:center;padding-block:clamp(120px,20vh,220px)}
 .mission .marker{font-size:clamp(26px,4vw,46px);display:block;margin-bottom:26px;transform:rotate(-3deg)}
 .mission h2{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(30px,5.4vw,74px);line-height:1.12;color:var(--chalk);max-width:20ch;margin:0 auto}
@@ -554,6 +562,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     <a href="#mission">The Mission</a>
     <a href="#ideas">Ideas</a>
     <a href="#now">Now</a>
+    <a href="#path">Find Your Path</a>
     <a href="#connect" class="cta">Connect</a>
   </nav>
 </header>
@@ -650,13 +659,15 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
             <div style="display:none;flex-direction:column;align-items:center;gap:8px"><div class="crest-mark lg" aria-hidden="true">H</div><div class="bt-name">Heritage Protection Solutions</div></div>
             <div class="bt-tag">Protecting your lineage</div>
           </div>
-          <img class="cardimg brand-photo" src="assets/images/work/heritage-protection.jpg" alt="Heritage Protection Solutions — family, protection, and generational planning" loading="lazy" onerror="this.style.display='none'">
+          <img class="cardimg brand-photo" src="assets/images/work/heritage-protection.jpg" alt="Heritage Protection Solutions — family, protection, and generational legacy" loading="lazy" onerror="this.style.display='none'">
         </div>
         <div class="body">
           <div class="top"><span class="status active">Active</span><span class="spine">Protect</span></div>
           <h3>Heritage Protection Solutions</h3>
-          <p>Financial education, protection strategy, retirement and estate-planning conversations, family protection, business-owner planning, and generational strategy.</p>
+          <p>Financial education, protection strategy, retirement, estate, and legacy conversations, family protection, business-owner protection, and generational strategy.</p>
           <a class="go ext" href="https://www.heritageprosolutions.com/" target="_blank" rel="noopener">Explore Heritage Protection <span>&rarr;</span></a>
+          <a class="go ext" href="https://aaronduchane.wixforms.com/f/7514018899533235236" target="_blank" rel="noopener">Find Your Path <span>&rarr;</span></a>
+          <p class="lic" style="margin:14px 0 0;text-align:left">CA Lic# 0K48492 · NV Lic# 4135418</p>
         </div>
       </article>
 
@@ -804,6 +815,19 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     </div>
   </section>
 
+  <!-- FIND YOUR PATH -->
+  <section class="path" id="path">
+    <div class="eyebrow rv" style="justify-content:center"><span class="bar"></span><span class="label">Find Your Path</span><span class="fig">Fig. 05.1</span></div>
+    <h2 class="rv d1">Protect your family, or <i>build</i> with me.</h2>
+    <p class="lede rv d1">Two minutes, a few questions, and I'll know how to help. Families get a no-pressure Clarity Session. Partners and future teammates get a Business Overview.</p>
+    <div class="path-btns rv d2">
+      <a class="path-btn primary" href="https://aaronduchane.wixforms.com/f/7514018899533235236" target="_blank" rel="noopener">Find Your Path &rarr;</a>
+      <a class="path-btn" href="https://calendly.com/aaron-duchane/clarity-session-overview" target="_blank" rel="noopener">Book a Clarity Session</a>
+      <a class="path-btn" href="https://calendly.com/aaron-duchane/business-overview" target="_blank" rel="noopener">Book a Business Overview</a>
+    </div>
+    <p class="lic rv d3">Aaron Duchane Sr. · Heritage Protection Solutions · CA Lic# 0K48492 · NV Lic# 4135418. Outside CA or NV? Reach out, I can expand to serve your state.</p>
+  </section>
+
   <!-- NOW -->
   <section id="now" class="scene" style="--scene-img:url('now-scene.png?v=2');--scene-pos:50% center;--scene-pos-m:62% center" aria-label="Now / In progress: executing today, building tomorrow">
     <div class="img" role="img" aria-label="Aaron at his design desk over architectural blueprints, with a laptop, a wall monitor, an open Bible and coffee, looking up in thought"></div>
@@ -934,6 +958,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
       <div class="crest-cap">Heritage Protection Solutions<br><span>Protecting your lineage</span></div>
     </div>
     <span class="foot-meta">© <span id="yr"></span> Aaron Duchane · The Man. The Work. The Mission.</span>
+    <p class="lic" style="margin:14px 0 0">Insurance products offered through Heritage Protection Solutions. Aaron Duchane Sr. · Heritage Protection Solutions · CA Lic# 0K48492 · NV Lic# 4135418. Outside CA or NV? Reach out, I can expand to serve your state.</p>
   </div>
 </footer>
 
@@ -1049,7 +1074,7 @@ const FORM_ENDPOINT = SITE_CONFIG.formEndpoint;
 const CONNECT_EMAIL = SITE_CONFIG.email;
 
 const TOPICS = {
-  protection: { full: "Heritage Protection Solutions", heading: "What are you trying to protect or prepare for?", prompt: "Tell me what's on your mind: family protection, retirement, estate planning, business planning, legacy, or something else.", link: { t: "Explore Heritage Protection →", u: SITE_CONFIG.ventures.heritageProtection }, subject: "Protection Inquiry" },
+  protection: { full: "Heritage Protection Solutions", heading: "What are you trying to protect or prepare for?", prompt: "Tell me what's on your mind: family protection, retirement, estate planning, business protection, legacy, or something else.", link: { t: "Faster: Find Your Path (2 min) →", u: "https://aaronduchane.wixforms.com/f/7514018899533235236" }, note: "CA Lic# 0K48492 · NV Lic# 4135418", subject: "Protection Inquiry" },
   building:   { full: "Building Projects", heading: "Tell me about the project.", prompt: "What are you building, where are you in the process, and what kind of help, design, coordination, or collaboration are you looking for?", subject: "Building Projects Inquiry" },
   "3path":    { full: "3 Path Financial", heading: "What are you looking to build with 3 Path?", prompt: "Tell me about the audience, idea, campaign, collaboration, or financial conversation you're trying to create.", link: { t: "Talk With Aaron →", u: SITE_CONFIG.ventures.threePath }, note: "Includes Selah Monroe · Virtual Host / Digital Brand Personality.", subject: "3 Path Financial Inquiry" },
   technology: { full: "Technology & Innovation", heading: "What are you trying to build or improve?", prompt: "Tell me about the idea, workflow, tool, problem, prototype, or system you're exploring.", subject: "Technology & Innovation Inquiry" },
