@@ -412,6 +412,8 @@ a.who-item:hover{color:var(--champagne)}
 .topic input:focus-visible+span{outline:2px solid var(--champagne);outline-offset:3px}
 .cform-heading{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(20px,2.4vw,30px);line-height:1.2;color:var(--chalk);margin-bottom:6px}
 .cform-note{font-size:12px;letter-spacing:.02em;color:var(--concrete);margin-bottom:12px}
+.cform.is-fyp .fields,.cform.is-fyp .cform-cta{display:none}
+.cform.is-fyp .cform-link{border:1px solid var(--champagne);background:var(--champagne);color:var(--ink);padding:16px 22px;font-size:13px;margin:6px 0 10px}
 .cform-link{display:inline-block;font-family:"Archivo";font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--champagne);margin-bottom:20px;transition:color .3s}
 .cform-link:hover{color:var(--chalk)}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px}
@@ -562,7 +564,6 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     <a href="#mission">The Mission</a>
     <a href="#ideas">Ideas</a>
     <a href="#now">Now</a>
-    <a href="#path">Find Your Path</a>
     <a href="#connect" class="cta">Connect</a>
   </nav>
 </header>
@@ -815,19 +816,6 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
     </div>
   </section>
 
-  <!-- FIND YOUR PATH -->
-  <section class="path" id="path">
-    <div class="eyebrow rv" style="justify-content:center"><span class="bar"></span><span class="label">Find Your Path</span><span class="fig">Fig. 05.1</span></div>
-    <h2 class="rv d1">Protect your family, or <i>build</i> with me.</h2>
-    <p class="lede rv d1">Two minutes, a few questions, and I'll know how to help. Families get a no-pressure Clarity Session. Partners and future teammates get a Business Overview.</p>
-    <div class="path-btns rv d2">
-      <a class="path-btn primary" href="https://aaronduchane.wixforms.com/f/7514018899533235236" target="_blank" rel="noopener">Find Your Path &rarr;</a>
-      <a class="path-btn" href="https://calendly.com/aaron-duchane/clarity-session-overview" target="_blank" rel="noopener">Book a Clarity Session</a>
-      <a class="path-btn" href="https://calendly.com/aaron-duchane/business-overview" target="_blank" rel="noopener">Book a Business Overview</a>
-    </div>
-    <p class="lic rv d3">Aaron Duchane Sr. · Heritage Protection Solutions · CA Lic# 0K48492 · NV Lic# 4135418. Outside CA or NV? Reach out, I can expand to serve your state.</p>
-  </section>
-
   <!-- NOW -->
   <section id="now" class="scene" style="--scene-img:url('now-scene.png?v=2');--scene-pos:50% center;--scene-pos-m:62% center" aria-label="Now / In progress: executing today, building tomorrow">
     <div class="img" role="img" aria-label="Aaron at his design desk over architectural blueprints, with a laptop, a wall monitor, an open Bible and coffee, looking up in thought"></div>
@@ -905,6 +893,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:clamp(56px
         </div>
       </div>
 
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <button class="cform-cta" type="submit">Connect with me <span>&rarr;</span></button>
       <p class="cform-status" id="cfStatus" role="status" aria-live="polite"></p>
     </form>
@@ -970,11 +959,11 @@ const SITE_CONFIG = {
   siteUrl:      "https://aaronduchane.com",
   email:        "aaron@aaronduchane.com",
   // Formspree: create account at formspree.io → New Form → paste endpoint below
-  formEndpoint: "[ADD FORMSPREE ENDPOINT]",
+  formEndpoint: "https://formsubmit.co/ajax/aaron@aaronduchane.com",
   social: {
-    instagram: "",  // e.g. "https://instagram.com/yourhandle"
-    facebook:  "",
-    linkedin:  "",
+    instagram: "https://www.instagram.com/heritage_protection/",
+    facebook:  "https://www.facebook.com/profile.php?id=61575950200984",
+    linkedin:  "https://www.linkedin.com/in/aduchane/",
     youtube:   "",
     tiktok:    "",
     twitter:   ""
@@ -1074,7 +1063,7 @@ const FORM_ENDPOINT = SITE_CONFIG.formEndpoint;
 const CONNECT_EMAIL = SITE_CONFIG.email;
 
 const TOPICS = {
-  protection: { full: "Heritage Protection Solutions", heading: "What are you trying to protect or prepare for?", prompt: "Tell me what's on your mind: family protection, retirement, estate planning, business protection, legacy, or something else.", link: { t: "Faster: Find Your Path (2 min) →", u: "https://aaronduchane.wixforms.com/f/7514018899533235236" }, note: "CA Lic# 0K48492 · NV Lic# 4135418", subject: "Protection Inquiry" },
+  protection: { full: "Heritage Protection Solutions", heading: "What are you trying to protect or prepare for?", prompt: "Tell me what's on your mind: family protection, retirement, estate planning, business protection, legacy, or something else.", fyp: true, link: { t: "Start Find Your Path (2 min) →", u: "https://aaronduchane.wixforms.com/f/7514018899533235236" }, note: "CA Lic# 0K48492 · NV Lic# 4135418", subject: "Protection Inquiry" },
   building:   { full: "Building Projects", heading: "Tell me about the project.", prompt: "What are you building, where are you in the process, and what kind of help, design, coordination, or collaboration are you looking for?", subject: "Building Projects Inquiry" },
   "3path":    { full: "3 Path Financial", heading: "What are you looking to build with 3 Path?", prompt: "Tell me about the audience, idea, campaign, collaboration, or financial conversation you're trying to create.", link: { t: "Talk With Aaron →", u: SITE_CONFIG.ventures.threePath }, note: "Includes Selah Monroe · Virtual Host / Digital Brand Personality.", subject: "3 Path Financial Inquiry" },
   technology: { full: "Technology & Innovation", heading: "What are you trying to build or improve?", prompt: "Tell me about the idea, workflow, tool, problem, prototype, or system you're exploring.", subject: "Technology & Innovation Inquiry" },
@@ -1097,6 +1086,7 @@ const TOPICS = {
     heading.textContent = t.heading; prompt.textContent = t.prompt;
     if (t.note) { note.textContent = t.note; note.hidden = false; } else { note.hidden = true; }
     if (t.link) { link.textContent = t.link.t; link.href = t.link.u; link.hidden = false; } else { link.hidden = true; }
+    form.classList.toggle('is-fyp', !!t.fyp);
   }
   form.querySelectorAll('input[name=topic]').forEach(r => r.addEventListener('change', applyTopic));
 
@@ -1131,7 +1121,7 @@ const TOPICS = {
     if (/^https?:\/\//.test(FORM_ENDPOINT)) {
       status.textContent = 'Sending…';
       try {
-        const res = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ name: d.name, email: d.email, phone: d.phone, 'Preferred contact': d.contact, Topic: d.topic, message: d.message, _subject: subject, _replyto: d.email }) });
+        const res = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ name: d.name, email: d.email, phone: d.phone, 'Preferred contact': d.contact, Topic: d.topic, message: d.message, _subject: subject, _replyto: d.email, _template: 'table', _honey: (form.querySelector('[name=_honey]')||{}).value || '' }) });
         if (res.ok) showSuccess();
         else status.textContent = 'Something went wrong. Please email ' + CONNECT_EMAIL + '.';
       } catch (err) { status.textContent = 'Network issue. Please email ' + CONNECT_EMAIL + '.'; }
