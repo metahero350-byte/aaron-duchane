@@ -1118,6 +1118,19 @@ const TOPICS = {
       topic: t.full, message: $('cf-message').value.trim()
     };
     const subject = "[AaronDuchane.com] " + t.subject;
+    // Building inquiries also land in the Visionary Advancement CRM (Inquiries tab).
+    if (selectedKey() === 'building' && !((form.querySelector('[name=_honey]')||{}).value)) {
+      try {
+        const id = Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
+        const S = (x) => ({ stringValue: String(x || '').slice(0, 4900) });
+        fetch('https://firestore.googleapis.com/v1/projects/visionary-advancement-crm/databases/(default)/documents/inquiries?documentId=' + id, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ fields: { id: S(id), name: { stringValue: (d.name || 'Website visitor').slice(0, 119) }, email: { stringValue: (d.email || '').slice(0, 199) }, phone: S(d.phone), contact: S(d.contact),
+            topic: S(d.topic), message: S(d.message), source: S('aaronduchane.com'), status: S('new'), archived: { booleanValue: false },
+            createdAt: S(new Date().toISOString()), created: S(new Date().toISOString().slice(0, 10)) } })
+        }).catch(() => {});
+      } catch (err) {}
+    }
     if (/^https?:\/\//.test(FORM_ENDPOINT)) {
       status.textContent = 'Sending…';
       try {
